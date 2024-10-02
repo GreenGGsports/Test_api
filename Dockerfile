@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8888
 
 # Command to run the app with Gunicorn, listening on port 8888
-CMD ["gunicorn", "--bind", "0.0.0.0:8888", "app:app"]
+CMD exec gunicorn --bind :8888 app:app
